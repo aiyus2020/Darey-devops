@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-nginx-service
+spec:
+  selector:
+    app: my-nginx
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: NodePort
+
+# This service will expose the Nginx deployment on port 80 and map it to a NodePort.
+# You can access the Nginx service using the Node's IP address and the assigned NodePort.
