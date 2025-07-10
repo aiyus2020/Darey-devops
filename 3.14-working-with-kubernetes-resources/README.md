@@ -66,11 +66,11 @@ and was greeted by the Nginx welcome page.
 
 ---
 ## screen Shot
-[talk](./imgs/res1.png)
-[talk](./imgs/res2.png)
-[talk](./imgs/res3.png)
-[talk](./imgs/res4.png)
-[talk](./imgs/res5.png)
+![talk](./imgs/res1.png)
+![talk](./imgs/res2.png)
+![talk](./imgs/res3.png)
+![talk](./imgs/res4.png)
+![talk](./imgs/res5.png)
 
 ## Conclusion
 
