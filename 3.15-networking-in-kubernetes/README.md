@@ -10,6 +10,23 @@ This project involved deploying a multi-container pod in a Kubernetes environmen
 
 ### 1. Creating the Multi-Container Pod
 - Defined a YAML manifest for deploying a pod with multiple containers (`multi-container-pod.yaml`).
+```bash
+apiVersion: v1
+kind: Pod
+metadata:
+  name: multi-container-pod
+spec:
+  containers:
+  - name: container-1
+    image: nginx:alpine
+  - name: container-2
+    image: busybox
+    command:
+      - '/bin/sh'
+      - '-c'
+      - 'mkdir -p /usr/share/nginx/html && while true; do echo "Hello from Container 2" >> /usr/share/nginx/html/index.html; sleep 10; done'
+
+```
 - Used `kubectl apply -f multi-container-pod.yaml` to create the pod.
 - Verified the pod status with `kubectl get pods`.
 
