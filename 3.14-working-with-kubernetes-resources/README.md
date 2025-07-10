@@ -26,7 +26,28 @@ docker build -t my-nginx .
 Then, I created a deployment configuration for my Nginx container. I used a YAML file to define the deployment with 1 replica, specifying the image I just built, and exposing port 80.
 
 script here [text](./nginx-deployment.yaml)
+```bash
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-nginx-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-nginx
+  template:
+    metadata:
+      labels:
+        app: my-nginx
+    spec:
+      containers:
+      - name: my-nginx
+        image: dareyregistry/my-nginx:1.0
+        ports:
+        - containerPort: 80
 
+```
 I applied this configuration with:
 
 ```bash
@@ -38,6 +59,24 @@ kubectl apply -f nginx-deployment.yaml
 To make my Nginx accessible, I created a Kubernetes service of type NodePort. This service maps port 80 in the container to a port on my localhost.
 
 script here [script](./nginx-service.yaml)
+
+```bash
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-nginx-service
+spec:
+  selector:
+    app: my-nginx
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: NodePort
+```
+# This service will expose the Nginx deployment on port 80 and map it to a NodePort.
+# You can access the Nginx service using the Node's IP address and the assigned NodePort.
+
 
 ```bash
 kubectl apply -f nginx-service.yaml
