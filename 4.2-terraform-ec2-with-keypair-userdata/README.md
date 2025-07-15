@@ -138,8 +138,9 @@ ssh -i /path/to/terraform-ec2.pem ec2-user@44.206.233.171
 ![text](imgs/key7.png) 
 ---
 ![text](imgs/key8.png)
+
 ![text](imgs/key9.png)
-```
+
 ![text](imgs/key10.png)
-```
+
 ![text](imgs/key11.png)
