@@ -112,8 +112,7 @@ Outputs:
 chmod 400 /path/to/terraform-ec2.pem
 ssh -i /path/to/terraform-ec2.pem ec2-user@44.206.233.171
 ```
-
-> **Note:** The web browser indicates `Not secure`, which is expected for a default instance.
+- destroyed the resources
 
 ## 7. Summary
 - Successfully set up and deployed an EC2 instance using Terraform.
@@ -139,3 +138,8 @@ ssh -i /path/to/terraform-ec2.pem ec2-user@44.206.233.171
 ![text](imgs/key7.png) 
 ---
 ![text](imgs/key8.png)
+![text](imgs/key9.png)
+```
+![text](imgs/key10.png)
+```
+![text](imgs/key11.png)
