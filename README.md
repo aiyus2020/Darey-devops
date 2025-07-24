@@ -60,7 +60,7 @@ Each project includes:
 
 ## 👨‍💻 About Me
 
-I'm **Aiyus Ediagbonya**, a DevOps enthusiast with a passion for cloud automation, CI/CD, and solving real-world problems using infrastructure as code.
+I'm **Aiyudubie Ediagbonya**, a DevOps enthusiast with a passion for cloud automation, CI/CD, and solving real-world problems using infrastructure as code.
 
 📫 Reach me:
 📧 [aiyusboss@gmail.com](mailto:aiyusboss@gmail.com)
